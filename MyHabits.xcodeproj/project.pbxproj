@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C20D958288C31F700D74B06 /* HabitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C20D957288C31F700D74B06 /* HabitDetailsViewController.swift */; };
+		2C20D95A288C344700D74B06 /* HabitDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C20D959288C344700D74B06 /* HabitDetailsTableViewCell.swift */; };
 		2C4FC784288A90F000C6D32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC783288A90F000C6D32C /* AppDelegate.swift */; };
 		2C4FC786288A90F000C6D32C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC785288A90F000C6D32C /* SceneDelegate.swift */; };
-		2C4FC788288A90F000C6D32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC787288A90F000C6D32C /* ViewController.swift */; };
-		2C4FC78B288A90F000C6D32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FC789288A90F000C6D32C /* Main.storyboard */; };
 		2C4FC78D288A90F400C6D32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FC78C288A90F400C6D32C /* Assets.xcassets */; };
 		2C4FC790288A90F400C6D32C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4FC78E288A90F400C6D32C /* LaunchScreen.storyboard */; };
+		2C4FC798288A959B00C6D32C /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC797288A959B00C6D32C /* HabitsViewController.swift */; };
+		2C4FC79A288A95AC00C6D32C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC799288A95AC00C6D32C /* InfoViewController.swift */; };
+		2C4FC79C288AA07700C6D32C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC79B288AA07700C6D32C /* Colors.swift */; };
+		2C4FC79E288AA11D00C6D32C /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC79D288AA11D00C6D32C /* HabitViewController.swift */; };
+		2C4FC7A2288AA93C00C6D32C /* TextForInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC7A1288AA93C00C6D32C /* TextForInfoVC.swift */; };
+		2C4FC7A8288AB7A500C6D32C /* HabitsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC7A7288AB7A500C6D32C /* HabitsStore.swift */; };
+		2C4FC7AA288B205400C6D32C /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC7A9288B205300C6D32C /* HabitCollectionViewCell.swift */; };
+		2C4FC7AC288B3A2D00C6D32C /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4FC7AB288B3A2D00C6D32C /* ProgressCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C20D957288C31F700D74B06 /* HabitDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailsViewController.swift; sourceTree = "<group>"; };
+		2C20D959288C344700D74B06 /* HabitDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		2C4FC780288A90F000C6D32C /* MyHabits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHabits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4FC783288A90F000C6D32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4FC785288A90F000C6D32C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C4FC787288A90F000C6D32C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C4FC78A288A90F000C6D32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C4FC78C288A90F400C6D32C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4FC78F288A90F400C6D32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C4FC791288A90F400C6D32C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4FC797288A959B00C6D32C /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
+		2C4FC799288A95AC00C6D32C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2C4FC79B288AA07700C6D32C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2C4FC79D288AA11D00C6D32C /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
+		2C4FC7A1288AA93C00C6D32C /* TextForInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextForInfoVC.swift; sourceTree = "<group>"; };
+		2C4FC7A7288AB7A500C6D32C /* HabitsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsStore.swift; sourceTree = "<group>"; };
+		2C4FC7A9288B205300C6D32C /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C4FC7AB288B3A2D00C6D32C /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +74,19 @@
 			children = (
 				2C4FC783288A90F000C6D32C /* AppDelegate.swift */,
 				2C4FC785288A90F000C6D32C /* SceneDelegate.swift */,
-				2C4FC787288A90F000C6D32C /* ViewController.swift */,
-				2C4FC789288A90F000C6D32C /* Main.storyboard */,
+				2C4FC797288A959B00C6D32C /* HabitsViewController.swift */,
+				2C4FC7A9288B205300C6D32C /* HabitCollectionViewCell.swift */,
+				2C4FC79D288AA11D00C6D32C /* HabitViewController.swift */,
+				2C20D957288C31F700D74B06 /* HabitDetailsViewController.swift */,
+				2C20D959288C344700D74B06 /* HabitDetailsTableViewCell.swift */,
+				2C4FC799288A95AC00C6D32C /* InfoViewController.swift */,
+				2C4FC7AB288B3A2D00C6D32C /* ProgressCollectionViewCell.swift */,
+				2C4FC7A7288AB7A500C6D32C /* HabitsStore.swift */,
 				2C4FC78C288A90F400C6D32C /* Assets.xcassets */,
 				2C4FC78E288A90F400C6D32C /* LaunchScreen.storyboard */,
 				2C4FC791288A90F400C6D32C /* Info.plist */,
+				2C4FC79B288AA07700C6D32C /* Colors.swift */,
+				2C4FC7A1288AA93C00C6D32C /* TextForInfoVC.swift */,
 			);
 			path = MyHabits;
 			sourceTree = "<group>";
@@ -127,7 +151,6 @@
 			files = (
 				2C4FC790288A90F400C6D32C /* LaunchScreen.storyboard in Resources */,
 				2C4FC78D288A90F400C6D32C /* Assets.xcassets in Resources */,
-				2C4FC78B288A90F000C6D32C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +161,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4FC788288A90F000C6D32C /* ViewController.swift in Sources */,
+				2C4FC7A8288AB7A500C6D32C /* HabitsStore.swift in Sources */,
+				2C4FC79C288AA07700C6D32C /* Colors.swift in Sources */,
+				2C4FC7A2288AA93C00C6D32C /* TextForInfoVC.swift in Sources */,
+				2C20D958288C31F700D74B06 /* HabitDetailsViewController.swift in Sources */,
+				2C4FC79E288AA11D00C6D32C /* HabitViewController.swift in Sources */,
+				2C4FC7AC288B3A2D00C6D32C /* ProgressCollectionViewCell.swift in Sources */,
 				2C4FC784288A90F000C6D32C /* AppDelegate.swift in Sources */,
+				2C20D95A288C344700D74B06 /* HabitDetailsTableViewCell.swift in Sources */,
 				2C4FC786288A90F000C6D32C /* SceneDelegate.swift in Sources */,
+				2C4FC798288A959B00C6D32C /* HabitsViewController.swift in Sources */,
+				2C4FC79A288A95AC00C6D32C /* InfoViewController.swift in Sources */,
+				2C4FC7AA288B205400C6D32C /* HabitCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C4FC789288A90F000C6D32C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C4FC78A288A90F000C6D32C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C4FC78E288A90F400C6D32C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,13 +309,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WA78UBCUF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHabits/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MyHabits";
+				PRODUCT_BUNDLE_IDENTIFIER = imogutov.MyHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,13 +337,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6WA78UBCUF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyHabits/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +352,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.MyHabits";
+				PRODUCT_BUNDLE_IDENTIFIER = imogutov.MyHabits;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
