@@ -45,6 +45,7 @@ class HabitsViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Сегодня"
         navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.setStatusBar(backgroundColor: .white)
     }
     
     override func viewDidLoad() {
@@ -52,11 +53,14 @@ class HabitsViewController: UIViewController {
         layout()
         navigationItem.rightBarButtonItem = addButton
         
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationAction), name: NSNotification.Name.needToReloadCollectionView, object: nil)
     }
-    override func viewWillAppear(_ animated: Bool) {
+    
+    @objc private func notificationAction() {
         collectionView.reloadData()
     }
 }
+
 
 extension HabitsViewController: UICollectionViewDataSource {
     
@@ -65,27 +69,24 @@ extension HabitsViewController: UICollectionViewDataSource {
             let cell: ProgressCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ProgressCollectionViewCell.self), for: indexPath) as! ProgressCollectionViewCell
             cell.setupProgress()
             return cell
-        } else {
-            let cell: HabitCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HabitCollectionViewCell.self), for: indexPath) as! HabitCollectionViewCell
-            let habit = HabitsStore.shared.habits[indexPath.row]
-            cell.update(with: habit)
-            cell.habitIsTaken = { [weak self] in
-                if habit.isAlreadyTakenToday == false {
-                    HabitsStore.shared.track(habit)
-                }
-                self?.collectionView.reloadData()
-            }
-            return cell
         }
+        let cell: HabitCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HabitCollectionViewCell.self), for: indexPath) as! HabitCollectionViewCell
+        let habit = HabitsStore.shared.habits[indexPath.row]
+        cell.update(with: habit)
+        cell.habitIsTaken = { [weak self] in
+            if habit.isAlreadyTakenToday == false {
+                HabitsStore.shared.track(habit)
+            }
+            self?.collectionView.reloadData()
+        }
+        return cell
     }
-
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
-        } else {
-            return HabitsStore.shared.habits.count
         }
+        return HabitsStore.shared.habits.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -93,25 +94,24 @@ extension HabitsViewController: UICollectionViewDataSource {
     }
 }
 
-
 extension HabitsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
             return CGSize(width: UIScreen.main.bounds.width - 32, height: 60)
-        } else {
-            return CGSize(width: UIScreen.main.bounds.width - 32, height: 130)
         }
+        return CGSize(width: UIScreen.main.bounds.width - 32, height: 130)
     }
-
-func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 22, left: 16, bottom: 0, right: 16)
-}
-
-func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-    return 12
-}
     
-func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 22, left: 16, bottom: 0, right: 16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 12
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsController = HabitDetailsViewController()
         if indexPath.section != 0 {
             navigationController?.pushViewController(detailsController, animated: true)
@@ -122,6 +122,8 @@ func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPat
     }
 }
 
-
+extension NSNotification.Name {
+    static let needToReloadCollectionView = NSNotification.Name("needToReloadCollectionView")
+}
 
 

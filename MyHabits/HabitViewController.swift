@@ -116,6 +116,7 @@ class HabitViewController: UIViewController {
     
     func deleteHabit(with habit: Habit) {
         store.habits.removeAll(where: {$0.name == habit.name})
+        NotificationCenter.default.post(name: NSNotification.Name.needToReloadCollectionView, object: nil)
     }
     
     private func layout() {
@@ -222,6 +223,7 @@ class HabitViewController: UIViewController {
         let newHabit = Habit(name: nameTextField.text ?? "", date: timeSelector.date, color: colorSelectorButton.backgroundColor ?? .systemGray6)
         store.habits.append(newHabit)
         dismiss(animated: true, completion: nil)
+        NotificationCenter.default.post(name: NSNotification.Name.needToReloadCollectionView, object: nil)
         
         } else {
             
@@ -232,6 +234,7 @@ class HabitViewController: UIViewController {
         store.habits.filter({$0.date == currentHabit?.date}).forEach({$0.date = timeSelector.date})
         store.habits.filter({$0.color == currentHabit?.color}).forEach({$0.color = colorSelectorButton.backgroundColor ?? .black})
         store.save()
+        NotificationCenter.default.post(name: NSNotification.Name.needToReloadCollectionView, object: nil)
     }
     }
         
@@ -242,7 +245,6 @@ class HabitViewController: UIViewController {
         setupNavigationBar()
         hideKeyboardWhenTappedAround()
     }
-    
 }
 
 extension HabitViewController: UIColorPickerViewControllerDelegate {

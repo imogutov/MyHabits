@@ -56,7 +56,7 @@ class HabitCollectionViewCell: UICollectionViewCell {
         checkInButton.layer.borderColor = habit.color.cgColor
         countLabel.text = "Счетчик: \(habit.trackDates.count)"
 
-        if habit.isAlreadyTakenToday == true {
+        if habit.isAlreadyTakenToday {
             takeCheckMark()
             checkInButton.isEnabled = false
         } else {
