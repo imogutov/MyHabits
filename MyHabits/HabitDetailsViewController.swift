@@ -22,7 +22,6 @@ class HabitDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
-        
     }
     
     private func layout() {

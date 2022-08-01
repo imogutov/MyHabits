@@ -2,7 +2,7 @@ import UIKit
 
 class HabitDetailsTableViewCell: UITableViewCell {
 
-    let activityDayLabel: UILabel = {
+    lazy var activityDayLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 17)
@@ -11,7 +11,6 @@ class HabitDetailsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
-        
         layout()
     }
     
